@@ -10,6 +10,13 @@ An AI chatbot that answers questions about team member activity by pulling live 
 - *"Show me Lisa's open pull requests"*
 - *"Tell me more about that first ticket"* — follow-up; no new API calls made
 
+## Notes
+
+The project description had these two endpoint requirements. Given the implementation I chose, I did not include endpoints for forwarding requests to Jira or GitHub. Instead that functionality is captured in OpenAI tools.
+
+* Implement endpoint to fetch user’s assigned issues
+* Implement endpoint to fetch user’s recent commits and PRs
+
 ## Local Development
 
 This is a monorepo containing both the frontend and backend services.

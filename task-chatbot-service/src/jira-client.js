@@ -46,6 +46,7 @@ async function getAssignedIssues(accountId) {
 }
 
 export async function getUserJiraActivity(name) {
+  if (!config.jira) throw new Error('JIRA is not configured');
   const user = await findJiraUser(name);
   if (!user) {
     return { user: null, issues: [] };

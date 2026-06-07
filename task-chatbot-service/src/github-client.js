@@ -77,6 +77,7 @@ async function getOpenPRs(username) {
 }
 
 export async function getUserGithubActivity(name, daysBack = 30, repo = null) {
+  if (!config.github) throw new Error('GitHub is not configured');
 
   const cacheKey = `${name}:${daysBack}:${repo ?? ''}`;
   const cached = activityCache.get(cacheKey);
