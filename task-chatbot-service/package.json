@@ -1,0 +1,29 @@
+{
+  "name": "task-chatbot",
+  "version": "1.0.0",
+  "description": "AI chatbot that answers questions about team member activity via JIRA and GitHub",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "smoke-test": "node scripts/smoke-test.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "helmet": "^8.2.0",
+    "openai": "^4.52.7"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.4",
+    "globals": "^17.6.0",
+    "supertest": "^7.2.2",
+    "vitest": "^2.1.9"
+  }
+}
